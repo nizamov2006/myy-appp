@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="kk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#6c5ce7">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CipherShift">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20192%20192%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%236c5ce7%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2300b894%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27192%27%20height%3D%27192%27%20rx%3D%2742%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2796%27%20y%3D%27128%27%20font-size%3D%2796%27%20font-family%3D%27Arial%27%20font-weight%3D%27800%27%20fill%3D%27%23fff%27%20text-anchor%3D%27middle%27%3ECS%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20192%20192%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%236c5ce7%27/%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2300b894%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%27192%27%20height%3D%27192%27%20rx%3D%2742%27%20fill%3D%27url%28%23g%29%27/%3E%3Ctext%20x%3D%2796%27%20y%3D%27128%27%20font-size%3D%2796%27%20font-family%3D%27Arial%27%20font-weight%3D%27800%27%20fill%3D%27%23fff%27%20text-anchor%3D%27middle%27%3ECS%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22CipherShift%22%2C%20%22short_name%22%3A%20%22CipherShift%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22background_color%22%3A%20%22%230e1020%22%2C%20%22theme_color%22%3A%20%22%236c5ce7%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2527http%253A//www.w3.org/2000/svg%2527%2520viewBox%253D%25270%25200%2520192%2520192%2527%253E%253Cdefs%253E%253ClinearGradient%2520id%253D%2527g%2527%2520x1%253D%25270%2527%2520y1%253D%25270%2527%2520x2%253D%25271%2527%2520y2%253D%25271%2527%253E%253Cstop%2520offset%253D%25270%2527%2520stop-color%253D%2527%25236c5ce7%2527/%253E%253Cstop%2520offset%253D%25271%2527%2520stop-color%253D%2527%252300b894%2527/%253E%253C/linearGradient%253E%253C/defs%253E%253Crect%2520width%253D%2527192%2527%2520height%253D%2527192%2527%2520rx%253D%252742%2527%2520fill%253D%2527url%2528%2523g%2529%2527/%253E%253Ctext%2520x%253D%252796%2527%2520y%253D%2527128%2527%2520font-size%253D%252796%2527%2520font-family%253D%2527Arial%2527%2520font-weight%253D%2527800%2527%2520fill%253D%2527%2523fff%2527%2520text-anchor%253D%2527middle%2527%253ECS%253C/text%253E%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22any%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%22%7D%5D%7D">
+<title>CipherShift — Орын ауыстыру шифрлері</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f3f5fb;--card:#fff;--tx:#161a2e;--mu:#6b7194;--ac:#6c5ce7;--ac2:#00b894;--bd:#e3e6f3;--cell:#eef0ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1020;--card:#171a32;--tx:#eceefc;--mu:#9aa0c8;--bd:#2a2e52;--cell:#20244a}}
+:root[data-theme="dark"]{--bg:#0e1020;--card:#171a32;--tx:#eceefc;--mu:#9aa0c8;--bd:#2a2e52;--cell:#20244a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;line-height:1.5}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+/* Навигация */
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:10px;padding:10px 16px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.brand{font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px;cursor:pointer;margin-right:auto}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-size:15px}
+.nav button.nbtn{border:0;border-radius:11px;padding:8px 14px;font-weight:600;cursor:pointer;background:transparent;color:var(--mu);font-size:14px;font-family:inherit}
+.nav button.nbtn:hover{background:var(--cell);color:var(--tx)}
+.nav button.nbtn.on{background:var(--ac);color:#fff}
+.nicon{border:0;border-radius:11px;width:36px;height:36px;cursor:pointer;background:var(--cell);color:var(--tx);font-size:15px}
+.wrap{max-width:1000px;margin:0 auto 40px;padding:20px 14px 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 8px 28px rgba(60,50,150,.08)}
+.btn{border:0;border-radius:12px;padding:11px 18px;font-weight:600;cursor:pointer;background:var(--cell);color:var(--tx);font-size:14px;font-family:inherit;display:inline-block;text-decoration:none}
+.btn.p{background:var(--ac);color:#fff}.btn.g{background:var(--ac2);color:#fff}
+.btn:hover{filter:brightness(1.08)}
+label{display:block;font-size:13px;color:var(--mu);margin:10px 0 4px;font-weight:600}
+textarea,input,select{width:100%;padding:11px 13px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+textarea{min-height:90px;resize:vertical}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.out{font-family:ui-monospace,Consolas,monospace;word-break:break-all;background:var(--cell);border-radius:12px;padding:14px;min-height:50px;margin-top:6px}
+.grid{overflow-x:auto;padding:6px 0}
+table.m{border-collapse:separate;border-spacing:4px;margin:6px 0}
+.m td,.m th{min-width:34px;height:34px;text-align:center;border-radius:8px;font-family:ui-monospace,monospace;font-weight:600}
+.m th{background:var(--ac);color:#fff}.m td{background:var(--cell)}.m td.h{background:var(--ac2);color:#fff;animation:pop .5s}
+@keyframes pop{from{transform:scale(.5);opacity:0}}
+.bars{display:flex;align-items:flex-end;gap:3px;height:120px;margin-top:8px;overflow-x:auto}
+.bar{flex:1;min-width:14px;background:linear-gradient(var(--ac),var(--ac2));border-radius:4px 4px 0 0;position:relative}
+.bar span{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--mu)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{background:var(--cell);border-radius:12px;padding:12px;text-align:center}.stat b{display:block;font-size:22px;color:var(--ac)}.stat small{color:var(--mu)}
+.hide{display:none}h3{margin:0 0 8px}p.t{color:var(--mu)}code{background:var(--cell);padding:2px 6px;border-radius:6px}
+/* ===== БАСТЫ БЕТ: HERO + 3D ===== */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:34px 26px;overflow:hidden;position:relative}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center}}
+.hero h1{margin:0 0 10px;font-size:clamp(26px,5vw,42px);line-height:1.15}
+.hero h1 .gr{background:linear-gradient(120deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{color:var(--mu);margin:0 0 20px;font-size:15.5px;max-width:520px}
+@media(max-width:760px){.hero p.sub{margin-left:auto;margin-right:auto}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+@media(max-width:760px){.chips{justify-content:center}}
+.chip{background:var(--cell);border-radius:99px;padding:6px 13px;font-size:12.5px;font-weight:600;color:var(--mu)}
+/* 3D сцена */
+.scene{height:300px;display:flex;align-items:center;justify-content:center;perspective:900px;position:relative}
+@media(max-width:760px){.scene{height:250px}}
+.orbit{position:absolute;width:280px;height:280px;border-radius:50%;border:1px dashed color-mix(in srgb,var(--ac) 35%,transparent);transform:rotateX(72deg);animation:orbspin 10s linear infinite}
+@keyframes orbspin{to{transform:rotateX(72deg) rotateZ(360deg)}}
+.cube{position:relative;width:150px;height:150px;transform-style:preserve-3d;animation:cubespin 14s linear infinite}
+@keyframes cubespin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+.face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:800;color:#fff;background:linear-gradient(135deg,rgba(108,92,231,.85),rgba(0,184,148,.75));border:1.5px solid rgba(255,255,255,.35);border-radius:18px;backdrop-filter:blur(2px);box-shadow:inset 0 0 40px rgba(255,255,255,.12)}
+.f1{transform:translateZ(75px)}.f2{transform:rotateY(90deg) translateZ(75px)}.f3{transform:rotateY(180deg) translateZ(75px)}.f4{transform:rotateY(-90deg) translateZ(75px)}.f5{transform:rotateX(90deg) translateZ(75px)}.f6{transform:rotateX(-90deg) translateZ(75px)}
+.core{position:absolute;width:150px;height:150px;transform-style:preserve-3d;animation:cubespin2 9s linear infinite reverse}
+@keyframes cubespin2{from{transform:rotateX(18deg) rotateY(0)}to{transform:rotateX(18deg) rotateY(360deg)}}
+.core .face{font-size:30px;background:linear-gradient(135deg,rgba(0,184,148,.55),rgba(108,92,231,.55));border-radius:14px}
+.core .f1{transform:translateZ(60px)}.core .f2{transform:rotateY(90deg) translateZ(60px)}.core .f3{transform:rotateY(180deg) translateZ(60px)}.core .f4{transform:rotateY(-90deg) translateZ(60px)}.core .f5{transform:rotateX(90deg) translateZ(60px)}.core .f6{transform:rotateX(-90deg) translateZ(60px)}
+.shadow3d{width:190px;height:26px;border-radius:50%;background:radial-gradient(ellipse,rgba(60,50,150,.35),transparent 70%);margin-top:14px;animation:shpulse 14s linear infinite}
+@keyframes shpulse{0%,100%{transform:scaleX(1);opacity:.9}25%{transform:scaleX(.75);opacity:.6}50%{transform:scaleX(.9);opacity:.8}75%{transform:scaleX(.75);opacity:.6}}
+/* Мүмкіндіктер */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.feat-c{background:var(--cell);border-radius:16px;padding:18px;cursor:pointer;border:1.5px solid transparent;transition:transform .2s,border-color .2s,box-shadow .2s}
+.feat-c:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 10px 24px rgba(60,50,150,.15)}
+.feat-c .em{font-size:28px}
+.feat-c h4{margin:8px 0 5px;font-size:15px}
+.feat-c p{margin:0;font-size:13px;color:var(--mu);line-height:1.5}
+.feat-c .go{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--ac)}
+/* Теория блоктары */
+.th-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.th-head .ic{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff}
+.th-head h2{margin:0;font-size:20px}
+.th-sub{color:var(--mu);margin:0 0 16px}
+.th-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:16px}
+.th-c{background:var(--cell);border-radius:14px;padding:16px;border-top:3px solid var(--ac)}
+.th-c .em{font-size:26px}
+.th-c h4{margin:8px 0 6px;font-size:15px}
+.th-c p{margin:0;font-size:13.5px;color:var(--mu);line-height:1.55}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.step{flex:1;min-width:115px;background:var(--cell);border-radius:12px;padding:12px 8px;text-align:center;font-size:13px;font-weight:600}
+.step small{display:block;color:var(--mu);font-weight:400;margin-top:4px;font-size:11.5px}
+.step .n{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;align-items:center;justify-content:center;font-size:12px;margin-bottom:6px}
+.note{background:linear-gradient(135deg,rgba(108,92,231,.12),rgba(0,184,148,.12));border:1px solid var(--bd);border-radius:14px;padding:16px;margin-top:14px}
+.note h4{margin:0 0 6px}
+.note p{margin:0;color:var(--mu);font-size:14px}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:26px 14px 30px}
+</style></head>
+<body>
+
+<nav class="nav">
+<div class="brand" onclick="go('home')"><span class="dot">🔐</span>CipherShift</div>
+<button class="nbtn on" id="nb-home" onclick="go('home')">🏠 Басты бет</button>
+<button class="nbtn" id="nb-app" onclick="go('app')">⚙️ Қолданба</button>
+<button class="nbtn" id="nb-an" onclick="go('an')">📊 Талдау</button>
+<button class="nicon" id="thm" title="Тақырып">🌓</button>
+</nav>
+
+<div class="wrap">
+
+<!-- ================= БАСТЫ БЕТ ================= -->
+<div id="home">
+<div class="card hero">
+<div>
+<h1>Орын ауыстыру <span class="gr">шифрлері</span> — ақпаратты қорғау алгоритмі</h1>
+<p class="sub">Бағанды ауыстыру, Rail Fence, қос ауыстыру және Сцитала — төрт әдісті қолданып мәтінді шифрлаңыз, дешифрлаңыз, 3D визуализациямен зерттеңіз.</p>
+<div class="chips"><span class="chip">🔒 4 шифр</span><span class="chip">📐 Матрица визуализациясы</span><span class="chip">📊 Жиілік талдауы</span><span class="chip">🌓 Қараңғы режим</span></div>
+<div class="acts" style="margin-top:0">
+<button class="btn p" onclick="go('app')">🚀 Қолданбаны ашу</button>
+<button class="btn g" onclick="go('an')">📊 Талдауға өту</button>
+</div>
+</div>
+<div>
+<div class="scene">
+<div class="orbit"></div>
+<div class="cube">
+<div class="face f1">Қ</div><div class="face f2">А</div><div class="face f3">У</div><div class="face f4">І</div><div class="face f5">П</div><div class="face f6">С</div>
+<div class="core">
+<div class="face f1">🛡️</div><div class="face f2">🔑</div><div class="face f3">#</div><div class="face f4">%</div><div class="face f5">&</div><div class="face f6">@</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center"><div class="shadow3d"></div></div>
+</div>
+</div>
+
+<div class="card">
+<h3 style="margin-bottom:12px">⚡ Мүмкіндіктер — әдісті таңдап, бірден сынаңыз</h3>
+<div class="feat">
+<div class="feat-c" onclick="openAlg('col')"><div class="em">🔡</div><h4>Бағанды орын ауыстыру</h4><p>Кілт сөзбен бағандарды реттеу — классикалық әдіс.</p><span class="go">Сынау →</span></div>
+<div class="feat-c" onclick="openAlg('rail')"><div class="em">🚂</div><h4>Rail Fence</h4><p>Зигзаг бойынша рельске жазу, жолмен оқу.</p><span class="go">Сынау →</span></div>
+<div class="feat-c" onclick="openAlg('dbl')"><div class="em">🔀</div><h4>Қос орын ауыстыру</h4><p>Екі кілтпен екі рет шифрлау — берік нұсқа.</p><span class="go">Сынау →</span></div>
+<div class="feat-c" onclick="openAlg('scy')"><div class="em">🏛️</div><h4>Сцитала</h4><p>Ежелгі Спартаның таяқша шифры.</p><span class="go">Сынау →</span></div>
+</div>
+</div>
+
+<div class="card">
+<div class="th-head"><div class="ic">📘</div><h2>Теория: Орын ауыстыру шифрлері</h2></div>
+<p class="th-sub">Орын ауыстыру (transposition) шифрында ашық мәтіндегі таңбалар алмастырылмайды — олар тек белгілі заң бойынша <b>орындарын ауыстырады</b>. Кілт — осы ауыстыру ережесі.</p>
+<div class="th-grid">
+<div class="th-c"><div class="em">🔡</div><h4>1. Бағанды ауыстыру</h4><p>Мәтін кілт сөз ұзындығындай бағаннан тұратын кестеге жолдап жазылады. Кілт сөздегі әріптердің алфавиттік реті бойынша бағандар оқылады. Бос орын <code>_</code> толтырғышымен толады.</p></div>
+<div class="th-c"><div class="em">🚂</div><h4>2. Rail Fence</h4><p>Мәтін N «рельс» бойымен зигзаг түрінде жазылып, әр рельс жолымен оқылады. Ең жеңіл орын ауыстыру әдістерінің бірі.</p></div>
+<div class="th-c"><div class="em">🔀</div><h4>3. Қос ауыстыру</h4><p>Бағанды ауыстыру екі түрлі кілтпен екі рет қолданылады — криптоталдауға төзімділігі айтарлықтай жоғары.</p></div>
+<div class="th-c"><div class="em">🏛️</div><h4>4. Сцитала</h4><p>Ежелгі Спартада таяқшаға оралған таспа; шифрлау — кестені жолмен жазып, бағанмен оқу. Кілт — таспаның ені.</p></div>
+</div>
+<h3 style="margin:18px 0 4px">Алгоритм қадамдары</h3>
+<div class="steps">
+<div class="step"><span class="n">1</span>Мәтінді дайындау<small>тазарту, форматтау</small></div>
+<div class="step"><span class="n">2</span>Кілтті таңдау<small>кілт сөз немесе сан</small></div>
+<div class="step"><span class="n">3</span>Кесте құру<small>бағандарға бөлу</small></div>
+<div class="step"><span class="n">4</span>Рет нөмірін есептеу<small>алфавиттік рет</small></div>
+<div class="step"><span class="n">5</span>Бағандарды оқу<small>рет бойынша</small></div>
+<div class="step"><span class="n">6</span>Шифрмәтін алу<small>дешифрлау — кері тәртіп</small></div>
+</div>
+<div class="note"><h4>💡 Қорытынды</h4><p>Таза орын ауыстыру шифрлері заманауи қорғау үшін жеткіліксіз, бірақ алмастыру шифрларымен біріктіріліп (өнім шифрлары, AES құрылымы — диффузия) қолданылады.</p></div>
+</div>
+</div>
+
+<!-- ================= ҚОЛДАНБА ================= -->
+<div id="app" class="hide">
+<div class="card">
+<button class="btn" style="margin-bottom:14px" onclick="go('home')">← Басты бетке оралу</button>
+<div class="row"><div><label>Алгоритм</label><select id="alg">
+<option value="col">Бағанды орын ауыстыру (кілт сөзбен)</option>
+<option value="rail">Rail Fence (қоршау шифры)</option>
+<option value="dbl">Қос орын ауыстыру (2 кілт)</option>
+<option value="scy">Сцитала (Scytale)</option></select></div>
+<div><label id="k1l">Кілт сөз</label><input id="k1" value="ҚАУІПСІЗДІК"></div>
+<div class="hide" id="k2w"><label>Екінші кілт сөз</label><input id="k2" value="ШИФР"></div></div>
+<label>Мәтін</label><textarea id="inp">Ақпаратты қорғау — қазіргі заманның маңызды міндеті</textarea>
+<div class="acts"><button class="btn p" id="enc">🔒 Шифрлау</button><button class="btn g" id="dec">🔓 Дешифрлау</button>
+<button class="btn" id="swp">⇅ Нәтижені кіріске</button><button class="btn" id="cpy">📋 Көшіру</button><button class="btn" id="rnd">🎲 Кездейсоқ кілт</button></div>
+<label>Нәтиже</label><div class="out" id="out">—</div>
+<div id="vis" style="margin-top:14px"><h3>Матрица визуализациясы</h3><div class="grid" id="grid"></div></div>
+</div>
+</div>
+
+<!-- ================= ТАЛДАУ ================= -->
+<div id="an" class="hide">
+<div class="card">
+<button class="btn" style="margin-bottom:14px" onclick="go('home')">← Басты бетке оралу</button>
+<h3>Жиілік талдауы</h3><p class="t">Орын ауыстыру шифрі әріптерді өзгертпейді, тек орнын ауыстырады — сондықтан жиілік таралуы бірдей қалады (ашық мәтін мен шифрмәтінде). Бұл — оның негізгі әлсіздігі.</p>
+<div class="stats"><div class="stat"><b id="sL">0</b><small>Таңба саны</small></div><div class="stat"><b id="sU">0</b><small>Бірегей әріп</small></div>
+<div class="stat"><b id="sE">0</b><small>Энтропия (бит)</small></div><div class="stat"><b id="sD">0%</b><small>Орын өзгерісі</small></div></div>
+<h3 style="margin-top:18px">Шифрмәтін әріптерінің жиілігі</h3><div class="bars" id="bars"></div><div style="height:22px"></div>
+<h3>Кілт кеңістігі</h3><p class="t" id="ks"></p>
+</div>
+</div>
+
+</div>
+<footer>CipherShift · Орын ауыстыру шифрлері негізінде ақпаратты қорғау алгоритмі</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const PAD='_';
+/* Беттер аралығында өту */
+function go(p){['home','app','an'].forEach(id=>$(id).classList.toggle('hide',id!==p));
+ ['home','app','an'].forEach(id=>$('nb-'+id).classList.toggle('on',id===p));window.scrollTo({top:0,behavior:'smooth'})}
+function openAlg(a){$('alg').value=a;sync();go('app')}
+function order(k){return [...k].map((c,i)=>({c:c.toLowerCase(),i})).sort((a,b)=>a.c<b.c?-1:a.c>b.c?1:a.i-b.i).map(o=>o.i)}
+function colEnc(t,k){const n=k.length,r=Math.ceil(t.length/n);const s=[...t.padEnd(r*n,PAD)];const o=order(k);let res='';
+ const rows=[];for(let i=0;i<r;i++)rows.push(s.slice(i*n,i*n+n));
+ o.forEach(c=>rows.forEach(w=>res+=w[c]));return{res,rows,o}}
+function colDec(c,k){const n=k.length,r=Math.ceil(c.length/n);const o=order(k);const s=[...c];const rows=Array.from({length:r},()=>[]);
+ o.forEach((col,idx)=>{for(let i=0;i<r;i++)rows[i][col]=s[idx*r+i]||PAD});
+ return{res:rows.map(w=>w.join('')).join('').replace(new RegExp(PAD+'+$'),''),rows,o}}
+function railPat(len,n){const p=[];let r=0,d=1;for(let i=0;i<len;i++){p.push(r);if(n>1){if(r===0)d=1;else if(r===n-1)d=-1;r+=d}}return p}
+function railEnc(t,n){const s=[...t],p=railPat(s.length,n);const rails=Array.from({length:n},()=>[]);s.forEach((c,i)=>rails[p[i]].push([c,i]));
+ return{res:rails.flat().map(x=>x[0]).join(''),rails,p,len:s.length}}
+function railDec(c,n){const s=[...c],p=railPat(s.length,n);const idx=[];for(let r=0;r<n;r++)p.forEach((x,i)=>{if(x===r)idx.push(i)});
+ const out=[];idx.forEach((pos,i)=>out[pos]=s[i]);return out.join('')}
+function scyEnc(t,n){return colEnc(t,[...Array(n).keys()].map(i=>String.fromCharCode(48+i)).join(''))}
+function scyDec(c,n){return colDec(c,[...Array(n).keys()].map(i=>String.fromCharCode(48+i)).join(''))}
+function cfg(){const a=$('alg').value;const k=$('k1').value.trim(),k2=$('k2').value.trim();return{a,k,k2,n:Math.max(2,Math.min(30,parseInt(k)||3))}}
+function run(mode){const {a,k,k2,n}=cfg();const t=$('inp').value;let res='',rows=null,o=null,rail=null;
+ if(!t){$('out').textContent='Мәтін енгізіңіз';return}
+ if((a==='col'||a==='dbl')&&!k){$('out').textContent='Кілт сөзді енгізіңіз';return}
+ if(a==='dbl'&&!k2){$('out').textContent='Екінші кілтті енгізіңіз';return}
+ if(a==='col'){const r=mode==='e'?colEnc(t,k):colDec(t,k);res=r.res;rows=r.rows;o=r.o}
+ else if(a==='dbl'){if(mode==='e'){const r1=colEnc(t,k);const r2=colEnc(r1.res,k2);res=r2.res;rows=r2.rows;o=r2.o}
+  else{const r1=colDec(t,k2);const r2=colDec(r1.res,k);res=r2.res;rows=r2.rows;o=r2.o}}
+ else if(a==='rail'){if(mode==='e'){const r=railEnc(t,n);res=r.res;rail=r}else{res=railDec(t,n);rail=railEnc(res,n)}}
+ else{const r=mode==='e'?scyEnc(t,n):scyDec(t,n);res=r.res;rows=r.rows;o=r.o}
+ $('out').textContent=res;draw(rows,o,rail,a==='col'||a==='dbl'?cfg().k:null);analyze(mode==='e'?t:res,mode==='e'?res:t)}
+function draw(rows,o,rail,key){let h='';
+ if(rail){const n=rail.rails.length;const m=Array.from({length:n},()=>Array(rail.len).fill(''));rail.rails.forEach((r,ri)=>r.forEach(([c,i])=>m[ri][i]=c));
+  h='<table class="m">'+m.map((r,i)=>'<tr><th>'+(i+1)+'</th>'+r.map(c=>'<td'+(c?' class="h"':'')+'>'+(c||'')+'</td>').join('')+'</tr>').join('')+'</table>'}
+ else if(rows){const n=rows[0].length;const rank=[];o.forEach((c,i)=>rank[c]=i+1);
+  const hd=key&&[...key].length===n?[...key]:[...Array(n).keys()].map(i=>i+1);
+  h='<table class="m"><tr>'+hd.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr><tr>'+rank.map(x=>'<th style="background:var(--ac2)">'+x+'</th>').join('')+'</tr>'+
+  rows.map(r=>'<tr>'+r.map(c=>'<td'+(c===PAD?'':' class="h"')+'>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table>'}
+ $('grid').innerHTML=h}
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function analyze(p,c){const s=[...c].filter(x=>x!==PAD&&x.trim());const f={};s.forEach(x=>{x=x.toLowerCase();f[x]=(f[x]||0)+1});
+ const keys=Object.keys(f).sort((a,b)=>f[b]-f[a]);const L=s.length||1;let H=0;keys.forEach(k=>{const q=f[k]/L;H-=q*Math.log2(q)});
+ const a=[...p],b=[...c];let diff=0;const m=Math.min(a.length,b.length);for(let i=0;i<m;i++)if(a[i]!==b[i])diff++;
+ $('sL').textContent=s.length;$('sU').textContent=keys.length;$('sE').textContent=H.toFixed(2);$('sD').textContent=(m?Math.round(diff/m*100):0)+'%';
+ const mx=f[keys[0]]||1;$('bars').innerHTML=keys.slice(0,32).map(k=>'<div class="bar" style="height:'+Math.max(8,f[k]/mx*100)+'%" title="'+k+': '+f[k]+'"><span>'+esc(k)+'</span></div>').join('');
+ const {a:al,k:key,k2}=cfg();const fact=n=>{let r=1;for(let i=2;i<=n;i++)r*=i;return r};
+ const n1=[...key].length,n2=[...k2].length;let txt='';
+ if(al==='col')txt='Кілт ұзындығы '+n1+' → '+n1+'! = '+fact(n1).toLocaleString('kk')+' мүмкін ауыстыру.';
+ else if(al==='dbl')txt='Екі кілт: '+n1+'!·'+n2+'! = '+(fact(n1)*fact(n2)).toLocaleString('kk')+' комбинация.';
+ else txt='Rail Fence/Сцитала кілт кеңістігі өте кішкентай (кілт — бүтін сан), brute-force арқылы лезде бұзылады.';
+ $('ks').textContent=txt}
+function sync(){const a=$('alg').value;$('k2w').classList.toggle('hide',a!=='dbl');
+ $('k1l').textContent=(a==='rail'||a==='scy')?'Рельс / баған саны (2–30)':'Кілт сөз';
+ if((a==='rail'||a==='scy')&&isNaN(parseInt($('k1').value)))$('k1').value='4';
+ if((a==='col'||a==='dbl')&&!isNaN(parseInt($('k1').value)))$('k1').value='ҚАУІПСІЗДІК'}
+$('alg').onchange=sync;$('enc').onclick=()=>run('e');$('dec').onclick=()=>run('d');
+$('swp').onclick=()=>{const o=$('out').textContent;if(o&&o!=='—')$('inp').value=o};
+$('cpy').onclick=async()=>{try{await navigator.clipboard.writeText($('out').textContent);$('cpy').textContent='✅ Көшірілді'}catch(e){$('cpy').textContent='Қолжетімсіз'}setTimeout(()=>$('cpy').textContent='📋 Көшіру',1500)};
+$('rnd').onclick=()=>{const a=$('alg').value;if(a==='rail'||a==='scy'){$('k1').value=2+Math.floor(Math.random()*8)}else{const ab='АӘБВГҒДЕЖЗИКҚЛМНҢОӨПРСТУҰҮФХҺЦЧШЩЫІЭЮЯ';const gen=()=>{let s='';for(let i=0;i<8;i++)s+=ab[Math.floor(Math.random()*ab.length)];return s};$('k1').value=gen();$('k2').value=gen()}};
+$('thm').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark'};
+sync();run('e');
+</script></body></html>
